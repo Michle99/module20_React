@@ -16,3 +16,15 @@ This React App is a simple Employee Directory app with its page layout and a sea
 
 <img src="./public/images/page_2.png" width="90%" alt="Page Screenshot 0">
 
+
+## Getting Started
+- Download dependencies:
+
+```
+npm install
+```
+- Run the app:
+
+```
+npm run start
+```
