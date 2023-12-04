@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
 import SearchBar from './SearchBar';
 import EmployeeList from './EmployeeList';
-import Footer from './Footer';
 
 const Homepage = () => {
   // State for employee data
