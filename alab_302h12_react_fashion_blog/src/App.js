@@ -8,8 +8,8 @@ import Footer from './Footer';
 const App = () => {
   const articleData = [
     {
-      date: 'November 27, 2023',
-      title: 'Fashion Trends for the Season',
+      date: '11/12/20',
+      title: 'On the Street in Brooklyn',
       image: '/images/blog-image-1.jpg',
       paragraph_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisi ac quam facilisis venenatis. Nulla facilisi. Sed nec nulla at augue luctus pellentesque. Vestibulum gravida augue ut odio consectetur, non ullamcorper enim vulputate. Etiam ac commodo lectus. Duis vel justo at tortor interdum viverra eu sit amet arcu.',
       paragraph_name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisi ac quam facilisis venenatis. Nulla facilisi. Sed nec nulla at augue luctus pellentesque. Vestibulum gravida augue ut odio consectetur, non ullamcorper enim vulputate. Etiam ac commodo lectus. Duis vel justo at tortor interdum viverra eu sit amet arcu.',
@@ -19,8 +19,8 @@ const App = () => {
       continues: 'Continues...'
     },
     {
-      date: 'November 27, 2023',
-      title: 'Fashion Trends for the Season',
+      date: '11/11/20',
+      title: 'Vintage in Vogue',
       image: '/images/blog-image-2.jpg',
       paragraph_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisi ac quam facilisis venenatis. Nulla facilisi. Sed nec nulla at augue luctus pellentesque. Vestibulum gravida augue ut odio consectetur, non ullamcorper enim vulputate. Etiam ac commodo lectus. Duis vel justo at tortor interdum viverra eu sit amet arcu.',
       paragraph_name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisi ac quam facilisis venenatis. Nulla facilisi. Sed nec nulla at augue luctus pellentesque. Vestibulum gravida augue ut odio consectetur, non ullamcorper enim vulputate. Etiam ac commodo lectus. Duis vel justo at tortor interdum viverra eu sit amet arcu.',
@@ -39,8 +39,6 @@ const App = () => {
         <Article key={index} {...article} />
         
       ))}
-      
-      <hr/>
       <Footer />
     </div>
   );

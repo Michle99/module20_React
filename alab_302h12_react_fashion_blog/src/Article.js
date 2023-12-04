@@ -1,4 +1,3 @@
-// Article.js
 import React from 'react';
 import styled from 'styled-components';
 
@@ -24,13 +23,16 @@ const ArticleImage = styled.img`
 `;
 
 const ArticleParagraph = styled.p`
-//   text-indent: 2em;
+  margin: 0;
+  padding: 0;
+  border: none;
 `;
 
 const ContinuesParagraph = styled.p`
-//   text-indent: 2em;
-//   float: right;
   color: red;
+  margin: 0;
+  padding: 0;
+  border: none;
 `;
 const ArticleParagraphTitle = styled.p`
     position: relative;
@@ -62,11 +64,7 @@ const Article = ({ date, title, image,
       <ArticleParagraph>{paragraph_mid}</ArticleParagraph>
       <ArticleParagraph>{paragraph_end}</ArticleParagraph>
       <ContinuesParagraph>{continues}</ContinuesParagraph>
-      <br/>
-      <hr/>
-      
     </ArticleContainer>
-    
   );
 };
 
