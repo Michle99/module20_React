@@ -1,7 +1,8 @@
 # Employee Directory React App
 
 ## Overview
-This React App is a simple Employee Directory app with its page layout and a search functionality included.
+This React App is a simple Employee Directory app with its page layout and a search functionality included. Used Random user API: https://randomuser.me/api/
+
 
 ## Screenshots
 
