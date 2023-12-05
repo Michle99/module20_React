@@ -1,3 +1,3 @@
-# Module 20 React
-## Per Scholas Module 20: Intro to React
+# Module 320 React Projects
+## Per Scholas Module 320: Intro to React
 This repository contains the Intro to React Projects: React Employee Directory & React Fashion Blog.
