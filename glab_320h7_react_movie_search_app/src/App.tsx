@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css'
 import Form from './components/Form'
 import MovieDisplay from './components/MovieDisplay'
@@ -17,15 +17,23 @@ function App() {
   const [movie, setMovie] = useState<MovieData | null>(null);
 
   const getMovie =async (searchterm:string) => {
-    const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchterm}`
-    );
-    
-    const movieData = await response.json();
-    console.log("Movie Data:", movieData)
-    setMovie(movieData);
-    
+    try {
+      const response = await fetch(
+        `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchterm}`
+      );
+      
+      const movieData = await response.json();
+      console.log("Movie Data:", movieData)
+      setMovie(movieData);
+    } catch (error) {
+      console.error("Error fetching movie data:", error);
+    }
   }
+
+  // Fetch default movie on first render
+  useEffect(() => {
+    getMovie("Clueless");
+  }, []);
 
   return (
     <div className="App">
