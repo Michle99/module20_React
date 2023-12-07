@@ -32,7 +32,7 @@ const MovieDisplay: React.FC<MovieProps> = ({ movie }) => {
       <Box sx={{ 
         mt: 4,
         border: 5,
-        borderColor: 'greenyellow',
+        borderColor: 'brown',
         }}
       >
         <Typography variant="h5">{movie.Title}</Typography>

@@ -58,7 +58,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
         <Form moviesearch={getMovie}/>
         <MovieDisplay movie={movie} />
     </div>

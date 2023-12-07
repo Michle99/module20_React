@@ -1,4 +1,10 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { 
+  Container,
+  Box, 
+  Button, 
+  TextField 
+} from "@mui/material";
 
 interface FormProps {
   moviesearch: (searchTerm: string) => void;
@@ -27,17 +33,33 @@ const Form: React.FC<FormProps> = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="searchterm"
-          onChange={handleChange}
-          value={formData.searchterm}
-        />
-        <input type="submit" value="submit" />
-      </form>
-    </div>
+    <Container maxWidth="sm">
+      <Box sx={{ 
+        mt: 4,
+        }}
+      >
+        <form onSubmit={handleSubmit}>
+          <TextField
+            type="text"
+            name="searchterm"
+            label="Search"
+            variant="filled"
+            onChange={handleChange}
+            value={formData.searchterm}
+            sx={{ mr: 2 }}
+          />
+          <Button 
+            size="large"
+            type="submit" 
+            variant="contained" 
+            color="primary" 
+            value="submit"
+          >
+            Submit
+          </Button>
+        </form>
+      </Box>
+    </Container>
   );
 };
 
