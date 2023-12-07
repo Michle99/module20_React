@@ -10,6 +10,23 @@ interface MovieData {
   Year: string;
 }
 
+const movieTitles = [
+  'Inception',
+  'The Shawshank Redemption',
+  'Pulp Fiction',
+  'The Godfather',
+  'Fight Club',
+  'Up',
+  'Pixar',
+  'Terminator'
+];
+
+// Get random movie titles
+function getRandomTitle(): string {
+  const randomIndex = Math.floor(Math.random() * movieTitles.length);
+  return movieTitles[randomIndex];
+}
+
 function App() {
   // API KEY
   const apiKey = import.meta.env.VITE_OMDB_API_kEY;
@@ -30,9 +47,14 @@ function App() {
     }
   }
 
+  const getRandomMovie = async () => {
+    const randomMovieTitle = getRandomTitle();
+    await getMovie(randomMovieTitle);
+  };
+
   // Fetch default movie on first render
   useEffect(() => {
-    getMovie("Clueless");
+    getRandomMovie();
   }, []);
 
   return (
