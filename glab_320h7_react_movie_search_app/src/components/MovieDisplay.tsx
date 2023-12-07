@@ -1,27 +1,52 @@
 import React from 'react';
+import {
+  Typography,
+  CardMedia,
+  createTheme,
+  Container,
+  Box
+} from '@mui/material';
+import { ThemeProvider } from '@mui/styles';
+
 
 interface MovieProps {
-    movie: {
-        Title: string;
-        Genre: string;
-        Poster: string;
-        Year: string;
-    } | null;
+  movie: {
+    Title: string;
+    Genre: string;
+    Poster: string;
+    Year: string;
+  } | null;
 }
 
 const MovieDisplay: React.FC<MovieProps> = ({ movie }) => {
+  // const classes = useStyles();
+  const theme = createTheme();
 
- if (!movie) {
+  if (!movie) {
     return null;
   }
 
   return (
-    <div className="movie-display">
-        <h1>{movie.Title}</h1>
-        <h2>{movie.Genre}</h2>
-        <img src={movie.Poster} alt={movie.Title} />
-        <h2>{movie.Year}</h2>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Container maxWidth="sm">
+      <Box sx={{ 
+        mt: 4,
+        border: 5,
+        borderColor: 'greenyellow',
+        }}
+      >
+        <Typography variant="h5">{movie.Title}</Typography>
+        <Typography variant="h6">{movie.Genre}</Typography>
+        <CardMedia
+          component="img"
+          alt={movie.Title}
+          height="400"
+          image={movie.Poster}
+        />
+        <Typography variant="h6">{movie.Year}</Typography>
+      </Box>
+    </Container>
+    </ThemeProvider>
   );
 };
 

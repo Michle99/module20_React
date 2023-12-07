@@ -18,7 +18,7 @@ const movieTitles = [
   'Fight Club',
   'Up',
   'Pixar',
-  'Terminator'
+  'Gone Girl'
 ];
 
 // Get random movie titles
